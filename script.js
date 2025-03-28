@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const email = "adhppl99@gmail.com"; // Thay email tại đây
-    const effectiveDate = new Date().toISOString().split("T")[0]; // Định dạng YYYY-MM-DD
+    const email = "adhppl99@gmail.com";
+    const effectiveDate = "2025-03-28";
 
     const emailElements = document.querySelectorAll("#contact-email");
     emailElements.forEach(el => el.innerHTML = `<a href="mailto:${email}">${email}</a>`);
