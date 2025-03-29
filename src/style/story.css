@@ -1,0 +1,109 @@
+/* Story Section */
+.story-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tiêu đề */
+.story-title {
+  font-size: 3rem;
+  font-family: "Creepster", cursive; /* Font chữ phong cách game kinh dị */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Line dưới tiêu đề */
+.story-title-line {
+  width: 100px;
+  height: 5px;
+  background: #9eb899;
+  margin: 10px 0 20px;
+}
+
+/* Văn bản */
+.story-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.story-content {
+  padding: 20px;
+}
+
+/* Story Image Container */
+.story-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.story-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.story-image-label {
+  position: absolute;
+  bottom: -65px; /* Đẩy label xuống xa hơn */
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: inline-block;
+  padding: 12px 24px; /* Tăng padding cho đẹp */
+  font-size: 1.2rem; /* Tăng font-size cho rõ hơn */
+
+  background: transparent;
+  color: white;
+  border: 2px solid #9eb899;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+
+  /* Hiệu ứng nhẹ */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Thêm hiệu ứng hover */
+.story-image-label:hover {
+  background: rgba(158, 184, 153, 0.2);
+}
+
+/* Hiệu ứng ngôi sao */
+.story-stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Icon ngôi sao */
+.story-star {
+  position: absolute;
+  width: 24px; /* Kích thước ngôi sao */
+  height: 24px;
+  background: url("src/img/star-dust.png") no-repeat center;
+  background-size: contain;
+  opacity: 0;
+  animation: starAnimation 5s infinite linear;
+}
+
+/* Animation bay lơ lửng */
+@keyframes starAnimation {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
