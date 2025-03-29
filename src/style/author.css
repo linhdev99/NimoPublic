@@ -10,14 +10,13 @@
 .author-list-wrapper {
   display: flex;
   overflow-x: auto;
-  /* scroll-snap-type: x mandatory; */
-  scroll-snap-type: none;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   scroll-behavior: smooth;
   white-space: nowrap;
   gap: 20px;
   padding: 10px;
+  justify-content: center;
 }
 
 .author-list-wrapper::-webkit-scrollbar {
