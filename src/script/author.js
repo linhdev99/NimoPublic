@@ -98,7 +98,11 @@ function autoScrollStep(container) {
   const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
   // Nếu đang cuộn sang phải và đã đến cuối, chuyển sang cuộn ngược lại sang trái
-  if (!isScrollingLeft && container.scrollLeft >= maxScrollLeft) {
+  if (
+    !isScrollingLeft &&
+    (container.scrollLeft >= maxScrollLeft ||
+      maxScrollLeft - container.scrollLeft < 3)
+  ) {
     isScrollingLeft = true; // Đổi hướng cuộn sang trái
   }
 
