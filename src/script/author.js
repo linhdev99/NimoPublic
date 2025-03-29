@@ -46,7 +46,7 @@ async function setupScrollButtons() {
   const scrollAmount = 300;
 
   await fetchAuthors();
-  if (authors.length > 3) {
+  if (authors.length > 1) {
     startAutoScroll(container);
   }
 
@@ -113,10 +113,4 @@ function autoScrollStep(container) {
   } else {
     container.scrollLeft += 3; // Cuộn sang phải
   }
-
-  console.log(
-    container.scrollLeft,
-    container.clientWidth,
-    container.scrollWidth
-  );
 }

@@ -5,6 +5,8 @@
   padding: 50px 0;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
 }
 
 /* Tiêu đề */
@@ -39,21 +41,21 @@
 /* Story Image Container */
 .story-image-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column; /* Set layout to vertical */
+  justify-content: center;
+  align-items: center;
+  margin: 20px; /* Cách các element 20px */
 }
 
 .story-image {
-  max-width: 100%;
+  height: auto;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 .story-image-label {
-  position: absolute;
-  bottom: -65px; /* Đẩy label xuống xa hơn */
-  left: 50%;
-  transform: translateX(-50%);
-
   display: inline-block;
   padding: 12px 24px; /* Tăng padding cho đẹp */
   font-size: 1.2rem; /* Tăng font-size cho rõ hơn */

@@ -3,11 +3,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Hàm tải các section từ file riêng
-function loadSections(sections) {
+async function loadSections(sections) {
   const contentDiv = document.getElementById("content");
-  let loadedCount = 0;
 
-  sections.forEach((section) => {
+  for (let section of sections) {
+    try {
+      // Đợi mỗi section tải xong trước khi tiếp tục tải section tiếp theo
+      const html = await loadSection(section);
+      // Chèn HTML vào đúng vị trí
+      contentDiv.insertAdjacentHTML("beforeend", html);
+    } catch (error) {
+      console.error(error);
+      contentDiv.insertAdjacentHTML(
+        "beforeend",
+        `<p class='error'>Đã xảy ra lỗi khi tải ${section}</p>`
+      );
+    }
+  }
+
+  // Sau khi tất cả các section đã được tải, gọi các hàm khởi tạo
+  initializeContent();
+  observeElements();
+  setupHomeLogoAnimation();
+  initAuthorData();
+}
+
+// Hàm tải một section duy nhất
+function loadSection(section) {
+  return new Promise((resolve, reject) => {
     fetch(`sections/${section}.html`)
       .then((response) => {
         if (!response.ok) {
@@ -15,24 +38,8 @@ function loadSections(sections) {
         }
         return response.text();
       })
-      .then((html) => {
-        contentDiv.insertAdjacentHTML("beforeend", html);
-        loadedCount++;
-
-        if (loadedCount === sections.length) {
-          initializeContent();
-          observeElements();
-          setupHomeLogoAnimation();
-          initAuthorData();
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        contentDiv.insertAdjacentHTML(
-          "beforeend",
-          `<p class='error'>Không thể tải ${section}</p>`
-        );
-      });
+      .then(resolve)
+      .catch(reject);
   });
 }
 
