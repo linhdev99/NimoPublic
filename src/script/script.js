@@ -23,6 +23,7 @@ function loadSections(sections) {
           initializeContent();
           observeElements();
           setupHomeLogoAnimation();
+          initAuthorData();
         }
       })
       .catch((error) => {

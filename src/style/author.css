@@ -1,10 +1,48 @@
+.author-container {
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Wrapper cuộn ngang */
+.author-list-wrapper {
+  display: flex;
+  overflow-x: auto;
+  /* scroll-snap-type: x mandatory; */
+  scroll-snap-type: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+.author-list-wrapper::-webkit-scrollbar {
+  display: none; /* Ẩn scrollbar trên Chrome */
+}
+
+/* Danh sách tác giả */
+.author-list {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Card tác giả */
 .author-card {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
+  flex: 0 0 auto;
+  width: 400px;
+  scroll-snap-align: center;
 }
 
+/* Hình ảnh tác giả */
 .author-img {
   width: 100%;
   height: auto;
@@ -16,6 +54,7 @@
   transform: scale(1.1);
 }
 
+/* Overlay hiển thị thông tin */
 .author-overlay {
   position: absolute;
   bottom: -100%;
@@ -32,6 +71,7 @@
   bottom: 0;
 }
 
+/* Danh sách chức vụ */
 .author-positions {
   list-style: none;
   padding: 0;
@@ -40,4 +80,32 @@
 
 .author-positions li {
   font-size: 14px;
+}
+
+/* Nút điều hướng */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: background 0.3s;
+  z-index: 100;
+}
+
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
 }

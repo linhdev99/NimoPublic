@@ -2,19 +2,19 @@
   {
     "name": "Huỳnh Phạm Phước Linh",
     "birthYear": 1999,
-    "positions": ["Game Designer", "Game Developer"],
+    "positions": ["Game Developer", "Game Designer"],
     "image": "https://picsum.photos/300/400?random=1"
   },
   {
     "name": "Huỳnh Phạm Xuân Linh",
     "birthYear": 2004,
-    "positions": ["Artist", "UI/UX Designer", "Game Designer"],
+    "positions": ["Artist", "Game Designer"],
     "image": "https://picsum.photos/300/400?random=2"
   },
   {
     "name": "Trần Lam Thuyên",
     "birthYear": 2004,
-    "positions": ["Artist", "UI/UX Designer"],
+    "positions": ["Artist"],
     "image": "https://picsum.photos/300/400?random=3"
   }
 ]
