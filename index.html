@@ -1,84 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Nimo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(to bottom, #FAE3D9, #F8C6C6);
-            color: #3D3D3D;
-            font-family: 'Poppins', sans-serif;
-        }
-        .container {
-            margin-top: 80px;
-        }
-        .nav-link {
-            color: #3D3D3D !important;
-            font-weight: 500;
-        }
-        .hero-section {
-            background: #FFFFFF;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .icon {
-            width: 114px;
-            height: 80px;
-        }
-        .banner {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .btn-custom {
-            background-color: #F8C6C6;
-            color: #3D3D3D;
-            font-weight: bold;
-            padding: 12px 24px;
-            border-radius: 10px;
-            transition: 0.3s;
-            text-decoration: none;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn-custom:hover {
-            background-color: #FFB6B6;
-            color: #000;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimo: Con đường trở thành thần</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/style/style.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img id="icon-img" src="" alt="Nimo" class="icon"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="btn btn-custom" href="privacy.html">Privacy Policy</a></li>
-                    <li class="nav-item ms-2"><a class="btn btn-custom" href="terms.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="container text-center">
-        <div class="hero-section">
-            <img id="banner-img" src="" alt="Banner" class="banner mb-4">
-            <h1 class="mb-3">Welcome to Nimo</h1>
-            <p class="lead">Your ultimate gaming experience!</p>
-            <p>Contact us at: <span id="contact-email"></span></p>
-            <p>Effective Date: <span id="effective-date"></span></p>
-        </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white hover-animate" href="privacy.html">Privacy</a></li>
+          <li class="nav-item"><a class="nav-link text-white hover-animate" href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
     </div>
-    
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </nav>
+
+  <div id="content"></div>
+
+  <footer class="text-center text-white py-3 bg-dark">
+    <p class="mb-0">&copy; 2025 Phuoc Linh. All rights reserved.</p>
+  </footer>
+
+  <script src="src/script/script.js"></script>
 </body>
+
 </html>

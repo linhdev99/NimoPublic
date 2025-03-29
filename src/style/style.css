@@ -1,0 +1,153 @@
+body {
+  background-color: #0c0f1c;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Background chung cho section */
+.section-background {
+  background: url("../img/background.png") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Nội dung chung cho section */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.section-content {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+/* Container hình ảnh có hiệu ứng */
+.image-container {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Nhãn cho ảnh */
+.image-label {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Khi phần tử hiện ra */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Thiết lập chung cho home section */
+.home-section {
+  position: relative;
+  height: 100vh; /* Chiều cao toàn màn hình */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/background.png") no-repeat center center/cover,
+    linear-gradient(to bottom, #016b36, #482603);
+}
+
+/* Logo */
+.home-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: auto;
+  height: 40px;
+}
+
+/* Menu */
+.home-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-menu a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Nội dung home */
+.home-content {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+/* Hình ảnh home */
+.home-image {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 256px;
+  height: auto;
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Ẩn ban đầu */
+.home-image,
+.home-title,
+.home-description,
+.home-button {
+  opacity: 0;
+}
+
+/* Hiệu ứng Animation */
+@keyframes moveUp {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
