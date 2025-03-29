@@ -4,6 +4,7 @@
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
+  justify-content: center;
 }
 
 /* Wrapper cuộn ngang */
@@ -17,6 +18,7 @@
   white-space: nowrap;
   gap: 20px;
   padding: 10px;
+  justify-content: center;
 }
 
 .author-list-wrapper::-webkit-scrollbar {

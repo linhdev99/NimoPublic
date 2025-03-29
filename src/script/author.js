@@ -83,6 +83,7 @@ function startAutoScroll(container) {
   function autoScrollLoop() {
     if (!isHovered && container.scrollWidth > container.clientWidth) {
       autoScrollStep(container);
+      container.style.justifyContent = "flex-start"; // Đảm bảo justify-content là flex-start khi auto-scroll
     }
     // Gọi lại tự động
     requestAnimationFrame(autoScrollLoop);
