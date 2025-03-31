@@ -9,12 +9,12 @@
     "name": "Huỳnh Phạm Xuân Linh",
     "birthYear": 2004,
     "positions": ["Artist", "Game Designer"],
-    "image": "https://picsum.photos/300/400?random=2"
+    "image": "src/img/xuanlinh.jpg"
   },
   {
     "name": "Trần Lam Thuyên",
     "birthYear": 2004,
     "positions": ["Artist"],
-    "image": "https://picsum.photos/300/400?random=3"
+    "image": "src/img/lamthuyen.jpg"
   }
 ]
